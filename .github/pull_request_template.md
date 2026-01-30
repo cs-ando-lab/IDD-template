@@ -1,7 +1,6 @@
 <!-- I want to review in Japanese. -->
 
-> [!NOTE]
-> `- [ ]` には`x`を入れてチェックを付けてください。
+<!-- `- [ ]` には`x`を入れてチェックを付けてください -->
 
 ## 関連Issue
 Closes #
