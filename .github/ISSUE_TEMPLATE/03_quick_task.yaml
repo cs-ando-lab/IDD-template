@@ -1,7 +1,7 @@
 name: ⚡ クイックタスク (Task)
 description: 細かいタスクやメモを素早く記録します
 title: "[Task]: "
-labels: ["task"]
+labels: ["Type: Task"]
 body:
   - type: textarea
     attributes:

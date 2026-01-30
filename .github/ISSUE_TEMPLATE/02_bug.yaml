@@ -1,7 +1,7 @@
 name: 🐛 バグ報告 (Bug Report)
 description: 発生している不具合やエラーを報告します
 title: "[Bug]: "
-labels: ["bug"]
+labels: ["Type: Bug"]
 body:
   - type: markdown
     attributes:
