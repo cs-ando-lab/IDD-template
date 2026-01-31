@@ -65,26 +65,23 @@ jobs:
             }
             
             // 歓迎メッセージ
-            const message = `## ${sizeEmoji} PRを作成いただきありがとうございます！
-
-@${author} さん、Pull Request #${prNumber} の作成ありがとうございます 🎉
-
-### 📊 PR情報
-- **変更行数**: +${additions} / -${deletions} (合計: ${totalChanges}行)
-- ${sizeComment}
-
-${tips.length > 0 ? '### 💬 フィードバック\\n' + tips.join('\\n\\n') : ''}
-
-${hasConventionalCommit && hasIssueReference ? '### ✅ 素晴らしい！\\n\\nタイトル形式もIssue紐付けも完璧です。CI チェックが完了したらレビューを依頼してください。' : ''}
-
----
-
-📚 **参考資料**:
-- [良いPRの例](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/.github/TEMPLATE_DOCS/examples/good-pull-request.md)
-- [コードレビューガイド](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/.github/TEMPLATE_DOCS/code-review-guide.md)
-- [FAQ](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/.github/TEMPLATE_DOCS/faq.md)
-
-レビュー後、何か質問があればお気軽にコメントしてください！`;
+            let message = `## ${sizeEmoji} PRを作成いただきありがとうございます！\n\n`;
+            message += `@${author} さん、Pull Request #${prNumber} の作成ありがとうございます 🎉\n\n`;
+            message += `### 📊 PR情報\n`;
+            message += `- **変更行数**: +${additions} / -${deletions} (合計: ${totalChanges}行)\n`;
+            message += `- ${sizeComment}\n\n`;
+            if (tips.length > 0) {
+              message += `### 💬 フィードバック\n` + tips.join('\n\n') + '\n\n';
+            }
+            if (hasConventionalCommit && hasIssueReference) {
+              message += `### ✅ 素晴らしい！\n\nタイトル形式もIssue紐付けも完璧です。CI チェックが完了したらレビューを依頼してください。\n\n`;
+            }
+            message += `---\n\n`;
+            message += `📚 **参考資料**:\n`;
+            message += `- [良いPRの例](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/.github/TEMPLATE_DOCS/examples/good-pull-request.md)\n`;
+            message += `- [コードレビューガイド](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/.github/TEMPLATE_DOCS/code-review-guide.md)\n`;
+            message += `- [FAQ](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/.github/TEMPLATE_DOCS/faq.md)\n\n`;
+            message += `レビュー後、何か質問があればお気軽にコメントしてください！`;
 
             github.rest.issues.createComment({
               owner: context.repo.owner,
