@@ -73,9 +73,9 @@ jobs:
 - **変更行数**: +${additions} / -${deletions} (合計: ${totalChanges}行)
 - ${sizeComment}
 
-${tips.length > 0 ? '### 💬 フィードバック\n' + tips.join('\n\n') : ''}
+${tips.length > 0 ? '### 💬 フィードバック\\n' + tips.join('\\n\\n') : ''}
 
-${hasConventionalCommit && hasIssueReference ? '### ✅ 素晴らしい！\n\nタイトル形式もIssue紐付けも完璧です。CI チェックが完了したらレビューを依頼してください。' : ''}
+${hasConventionalCommit && hasIssueReference ? '### ✅ 素晴らしい！\\n\\nタイトル形式もIssue紐付けも完璧です。CI チェックが完了したらレビューを依頼してください。' : ''}
 
 ---
 
