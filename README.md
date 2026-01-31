@@ -3,11 +3,32 @@
 > **Note**
 > このリポジトリは「Issue駆動開発 (IDD)」を実践するためのテンプレートです。
 > 右上の `Use this template` ボタンから新しいリポジトリを作成して利用してください。
+> 
+> **テンプレート利用者へ**: 新規リポジトリ作成後の最初のpush時に、テンプレート用ドキュメント（`.github/TEMPLATE_DOCS/`）とこのREADMEは自動的に削除されます。
 
 ## 📖 概要
 
 「**No Issue, No Code**（Issueなくしてコードなし）」を原則とする開発テンプレートです。
 個人開発からチーム開発まで、要件定義と実装の紐付けを強制し、開発迷子を防ぎます。
+
+### 🎓 初めての方へ
+
+**Issue駆動開発（IDD）とは？**
+- 全ての変更を「Issue」として記録し、コードと紐付ける開発手法
+- 「なぜこのコードを書いたのか？」が常に追跡可能
+- チームでも個人でも、開発の迷子を防ぎ、品質を保つ
+
+**このテンプレートが解決する課題**
+- ❌ 何から手をつければいいかわからない → ✅ Issueで作業を明確化
+- ❌ 過去の変更理由がわからない → ✅ Issue-PR-Commitが完全に紐付く
+- ❌ チーム開発で混乱する → ✅ 統一されたルールとテンプレート
+- ❌ レビューで何を見ればいいかわからない → ✅ チェックリストとガイド付き
+
+**学習リソース**
+- 📚 [段階的ガイド](.github/TEMPLATE_DOCS/getting-started.md) - ステップバイステップで学習
+- 💡 [FAQ・トラブルシューティング](.github/TEMPLATE_DOCS/faq.md) - よくある疑問を解決
+- 📋 [サンプル集](.github/TEMPLATE_DOCS/examples/README.md) - 実際のIssue/PR例
+- 🎯 [コードレビューガイド](.github/TEMPLATE_DOCS/code-review-guide.md) - レビューの作法を学習
 
 ### 特徴
 - 👮 **IDD Guard**: Issueと紐付かないPRをCIでブロック (.github/workflows/idd-guard.yml)

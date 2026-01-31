@@ -30,7 +30,10 @@ jobs:
             mv .github/template/README.md README.md
           fi
           
-          # 3. 不要になったディレクトリを削除
+          # 3. テンプレート用ドキュメントを削除
+          rm -rf .github/TEMPLATE_DOCS
+          
+          # 4. 不要になったディレクトリを削除
           rm -rf .github/template
 
       - name: Configure Git
